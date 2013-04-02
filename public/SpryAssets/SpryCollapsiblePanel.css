@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.CollapsiblePanel {
+}
+
+.CollapsiblePanelTab {
+	color: white;
+	font-weight: bold;
+	background-color: #094bb3;
+	margin-top: 10px;
+	padding: 10px 20px;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+.CollapsiblePanelContent {
+	padding: 0px 20px 20px 20px;
+}
+
+.CollapsiblePanelTab a {
+	color: black;
+	text-decoration: none;
+}
+
+.CollapsiblePanelOpen .CollapsiblePanelTab {
+	background-color: #094bb3;
+}
+
+.CollapsiblePanelClosed .CollapsiblePanelTab {
+ /* background-color: #EFEFEF */
+}
+
+.CollapsiblePanelTabHover,  .CollapsiblePanelOpen .CollapsiblePanelTabHover {
+	background-color: #CCC;
+	color: #333;
+}
+
+.CollapsiblePanelFocused .CollapsiblePanelTab {
+	background-color: #3399FF;
+	color: white;
+}
