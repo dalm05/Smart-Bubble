@@ -1,0 +1,23 @@
+<div><%= link_to "Authorize Login", authorize_user_session_path %>
+	 or 
+	 <%= link_to "Help", help_index_path %>
+	 or
+	 <%= link_to "About", about_index_path %> 
+</div>
+
+<%= @student %>
+
+<h1>Smart Bubble Survey</h1>
+<%= form_for('student_login', :url => new_student_login_session_path) do |f| %>
+
+    <div>
+		<%= f.label :Course %><br />   
+	 	<%= f.text_field :email %>
+  	</div>
+  	<div>
+  		<%= f.label :Code %><br />
+  		<%= f.password_field :password %>
+  	</div>
+
+  <div><%= f.submit "Sign in" %></div>
+<% end %>

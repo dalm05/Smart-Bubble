@@ -8,7 +8,7 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>       
+    </div>
   <% end %>
 
   <div class="field">
@@ -20,12 +20,20 @@
     <%= f.text_field :course_id %>
   </div>
   <div class="field">
-    <%= f.label :section_id %><br />
-    <%= f.text_field :section_id %>
+    <%= f.label :section %><br />
+    <%= f.text_field :section %>
   </div>
   <div class="field">
     <%= f.label :instructor_id %><br />
     <%= f.text_field :instructor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :question_1 %><br />
+    <%= f.text_field :question_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :response %><br />
+    <%= f.text_field :response %>
   </div>
   <div class="actions">
     <%= f.submit %>

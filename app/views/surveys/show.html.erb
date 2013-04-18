@@ -12,7 +12,7 @@
 
 <p>
   <b>Section:</b>
-  <%= @survey.section_id %>
+  <%= @survey.section %>
 </p>
 
 <p>
@@ -21,23 +21,15 @@
 </p>
 
 <p>
-  <b>1. </b>
-  <%= @survey.question_l %>
+  <b>Question 1:</b>
+  <%= @survey.question_1 %>
 </p>
 
 <p>
-  <b>2. </b>
-  <%= @survey.question_a %>
+  <b>Response:</b>
+  <%= @survey.response %>
 </p>
 
-<p>
-  <b>3. </b>
-  <%= @survey.question_b %>
-</p>
 
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
- 
-<%= link_to "add questions", questions_path%>  |
-
 <%= link_to 'Back', surveys_path %>
-
