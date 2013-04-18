@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Survey:</b>
+  <%= @survey.survey_id %>
+</p>
+
+<p>
+  <b>Course:</b>
+  <%= @survey.course_id %>
+</p>
+
+<p>
+  <b>Section:</b>
+  <%= @survey.section_id %>
+</p>
+
+<p>
+  <b>Instructor:</b>
+  <%= @survey.instructor_id %>
+</p>
+
+<p>
+  <b>1. </b>
+  <%= @survey.question_l %>
+</p>
+
+<p>
+  <b>2. </b>
+  <%= @survey.question_a %>
+</p>
+
+<p>
+  <b>3. </b>
+  <%= @survey.question_b %>
+</p>
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+ 
+<%= link_to "add questions", questions_path%>  |
+
+<%= link_to 'Back', surveys_path %>
+

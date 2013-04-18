@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  label_1: MyString
+  label_2: MyString
+  label_3: MyString
+  label_4: MyString
+  label_5: MyString
+
+two:
+  label_1: MyString
+  label_2: MyString
+  label_3: MyString
+  label_4: MyString
+  label_5: MyString
