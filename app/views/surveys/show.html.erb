@@ -20,24 +20,11 @@
   <%= @survey.instructor_id %>
 </p>
 
-<p>
-  <b>1. </b>
-  <%= @survey.question_l %>
-</p>
-
-<p>
-  <b>2. </b>
-  <%= @survey.question_a %>
-</p>
-
-<p>
-  <b>3. </b>
-  <%= @survey.question_b %>
-</p>
+<%= link_to 'questions', question_path(@survey)%> |
 
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
  
-<%= link_to "add questions", questions_path%>  |
+<%= link_to "add questions", new_survey_question_path(@survey)%> |
 
-<%= link_to 'Back', surveys_path %>
+<%= link_to 'Back', surveys_path(@survey) %>
 

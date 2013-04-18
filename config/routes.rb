@@ -1,14 +1,14 @@
 SmartBubble::Application.routes.draw do
-  resources :questions
+  
+  #resources :tags
 
+  #resources :labels
 
-  resources :tags
+resources :questions
 
-
-  resources :labels
-
-
-  resources :surveys
+  resources :surveys do
+      resources :questions
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

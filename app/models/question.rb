@@ -1,3 +1,3 @@
 class Question < ActiveRecord::Base
-  attr_accessible :question, :question_id, :option
+  attr_accessible :survey_id, :question, :question_id, :option
 end

@@ -2,22 +2,6 @@
 
 <%= render 'form' %>
 
-<p>
-  <b>1. </b>
-  <%= @survey.question_l %>
-</p>
-<%= form_for(@survey) do |f| %>
-
- <div class="field">    
-    <%= f.radio_button :response_a, "good", :checked => false %>
-    <td><%= link_to :tag_path, tag_path%></td>
-    <%= f.radio_button :response_b, "good", :checked => false %>
-    <td><%= link_to :label_2, tag_path%></td>
-    <%= f.radio_button :response_c, "good", :checked => false %>
-    <td><%= link_to :label_3, tag_path%></td>
-    
-    <%end%>
-
 
 <%= link_to 'Show', @survey %> |
 <%= link_to 'Back', surveys_path %>
