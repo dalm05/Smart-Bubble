@@ -1,5 +1,17 @@
 <h1>New question</h1>
 
+<table>
+<th> Course </th>
+<th> Section</th>
+<th> Instructor</th>
+
+  <tr>    
+    <td><%= @survey.course_id %></td>
+    <td><%= @survey.section_id %></td>
+    <td><%= s@urvey.instructor_id %></td>  
+         
+  </table>
+
 <%= render 'form' %>
 
 <%= link_to 'Back', questions_path %>

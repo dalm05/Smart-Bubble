@@ -2,25 +2,22 @@
 
 <table>
   <tr>
-    <th>Survey</th>
+    <th>Survey id</th>
     <th>Course</th>
     <th>Section</th>
-    <th>Instructor</th>    
-    
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Instructor</th>        
   </tr>
 
 <% @surveys.each do |survey| %>
   <tr>
-    <td><%= survey.survey_id %></td>
+    <td><%= survey.id %></td>
     <td><%= survey.course_id %></td>
     <td><%= survey.section_id %></td>
     <td><%= survey.instructor_id %></td>      
     <td><%= link_to 'Show', survey %></td>
     <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
-    <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure you want to delete this survey?' } %></td>
+    <td><%= link_to 'Delete', survey, method: :delete, data: 
+        { confirm: 'Are you sure you want to delete this survey?' } %></td>
   </tr>
 <% end %>
 </table>
