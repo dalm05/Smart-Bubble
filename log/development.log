@@ -70623,3 +70623,6 @@ Migrating to CreateTags (20130417184434)
 Migrating to CreateQuestions (20130418022756)
 Migrating to DeviseCreateStudentLogins (20130418185345)
   [1m[35m (2.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing a block to devise_for is deprecated. Please remove the block from devise_for (only the block, the call to devise_for must still exist) and call devise_scope :authorize_user do ... end with the block instead. (called from block in <top (required)> at C:/Users/Danny/Desktop/Bubble/Smart-Bubble/config/routes.rb:23)
+DEPRECATION WARNING: Passing a block to devise_for is deprecated. Please remove the block from devise_for (only the block, the call to devise_for must still exist) and call devise_scope :student_login do ... end with the block instead. (called from block in <top (required)> at C:/Users/Danny/Desktop/Bubble/Smart-Bubble/config/routes.rb:25)
