@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130418185345) do
 
-<<<<<<< HEAD
-  create_table "questions", :force => true do |t|
-    t.integer  "survey_id"
-    t.string   "question_id"
-    t.string   "question"
-    t.string   "option"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-=======
   create_table "authorize_users", :force => true do |t|
     t.string   "username",               :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -45,6 +34,25 @@ ActiveRecord::Schema.define(:version => 20130418185345) do
   add_index "authorize_users", ["reset_password_token"], :name => "index_authorize_users_on_reset_password_token", :unique => true
   add_index "authorize_users", ["username"], :name => "index_authorize_users_on_username", :unique => true
 
+  create_table "labels", :force => true do |t|
+    t.string   "label_1"
+    t.string   "label_2"
+    t.string   "label_3"
+    t.string   "label_4"
+    t.string   "label_5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "questions", :force => true do |t|
+    t.integer  "survey_id"
+    t.string   "question_id"
+    t.string   "question"
+    t.string   "option"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "student_logins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -63,18 +71,22 @@ ActiveRecord::Schema.define(:version => 20130418185345) do
   add_index "student_logins", ["email"], :name => "index_student_logins_on_email", :unique => true
   add_index "student_logins", ["reset_password_token"], :name => "index_student_logins_on_reset_password_token", :unique => true
 
->>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
   create_table "surveys", :force => true do |t|
     t.string   "course_id"
-    t.string   "section"
+    t.string   "section_id"
     t.string   "instructor_id"
-<<<<<<< HEAD
-=======
-    t.string   "question_1"
-    t.string   "response"
->>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "label_1"
+    t.string   "label_2"
+    t.string   "label_3"
+    t.string   "label_4"
+    t.string   "label_5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

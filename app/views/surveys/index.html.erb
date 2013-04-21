@@ -1,42 +1,23 @@
-<h1>Listing surveys</h1>
+<h1>Smart-Bubble surveys</h1>
 
 <table>
   <tr>
     <th>Survey id</th>
     <th>Course</th>
     <th>Section</th>
-<<<<<<< HEAD
     <th>Instructor</th>        
-=======
-    <th>Instructor</th>
-    <th>Question 1</th>
-    <th>Response</th>
-    <th></th>
-    <th></th>
-    <th></th>
->>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
   </tr>
 
 <% @surveys.each do |survey| %>
   <tr>
     <td><%= survey.id %></td>
     <td><%= survey.course_id %></td>
-<<<<<<< HEAD
     <td><%= survey.section_id %></td>
     <td><%= survey.instructor_id %></td>      
     <td><%= link_to 'Show', survey %></td>
     <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
     <td><%= link_to 'Delete', survey, method: :delete, data: 
         { confirm: 'Are you sure you want to delete this survey?' } %></td>
-=======
-    <td><%= survey.section %></td>
-    <td><%= survey.instructor_id %></td>
-    <td><%= survey.question_1 %></td>
-    <td><%= survey.response %></td>
-    <td><%= link_to 'Show', survey %></td>
-    <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
-    <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
->>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
   </tr>
 <% end %>
 </table>

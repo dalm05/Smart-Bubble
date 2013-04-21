@@ -1,5 +1,5 @@
 SmartBubble::Application.routes.draw do
-<<<<<<< HEAD
+
   
   #resources :tags
 
@@ -11,7 +11,7 @@ resources :questions
       resources :questions
   end
 
-=======
+
    
   resources :surveys
   resources :department
@@ -25,7 +25,7 @@ resources :questions
   devise_for :student_logins do get '/student_logins/sign_out' => 'devise/sessions#destroy' end
   
   root :to => "welcome_page#index"
->>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
