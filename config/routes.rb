@@ -1,4 +1,5 @@
 SmartBubble::Application.routes.draw do
+<<<<<<< HEAD
   
   #resources :tags
 
@@ -10,6 +11,21 @@ resources :questions
       resources :questions
   end
 
+=======
+   
+  resources :surveys
+  resources :department
+  resources :admin
+  resources :instructor
+  resources :about
+  resources :help
+  
+  devise_for :authorize_users do get '/authorize_users/sign_out' => 'devise/sessions#destroy' end
+  
+  devise_for :student_logins do get '/student_logins/sign_out' => 'devise/sessions#destroy' end
+  
+  root :to => "welcome_page#index"
+>>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -59,7 +75,7 @@ resources :questions
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'surveys#index'
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

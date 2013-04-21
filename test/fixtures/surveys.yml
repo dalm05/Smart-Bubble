@@ -3,57 +3,15 @@
 one:
   survey_id: MyString
   course_id: MyString
-  section_id: MyString
+  section: MyString
   instructor_id: MyString
-  question_a: MyString
-  question_b: MyString
-  question_c: MyString
-  question_d: MyString
-  question_e: MyString
-  question_f: MyString
-  question_g: MyString
-  question_h: MyString
-  question_i: MyString
-  question_j: MyString
-  question_k: MyString
-  question_l: MyString
-  response_a: MyString
-  response_b: MyString
-  response_c: MyString
-  response_d: MyString
-  response_e: MyString
-  response_f: MyString
-  response_g: MyString
-  response_h: MyString
-  response_i: 
-  response_k: MyString
-  response_l: MyString
+  question_1: MyString
+  response: MyString
 
 two:
   survey_id: MyString
   course_id: MyString
-  section_id: MyString
+  section: MyString
   instructor_id: MyString
-  question_a: MyString
-  question_b: MyString
-  question_c: MyString
-  question_d: MyString
-  question_e: MyString
-  question_f: MyString
-  question_g: MyString
-  question_h: MyString
-  question_i: MyString
-  question_j: MyString
-  question_k: MyString
-  question_l: MyString
-  response_a: MyString
-  response_b: MyString
-  response_c: MyString
-  response_d: MyString
-  response_e: MyString
-  response_f: MyString
-  response_g: MyString
-  response_h: MyString
-  response_i: 
-  response_k: MyString
-  response_l: MyString
+  question_1: MyString
+  response: MyString

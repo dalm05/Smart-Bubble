@@ -11,8 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130418022756) do
+ActiveRecord::Schema.define(:version => 20130418185345) do
 
+<<<<<<< HEAD
   create_table "questions", :force => true do |t|
     t.integer  "survey_id"
     t.string   "question_id"
@@ -22,10 +23,56 @@ ActiveRecord::Schema.define(:version => 20130418022756) do
     t.datetime "updated_at",  :null => false
   end
 
+=======
+  create_table "authorize_users", :force => true do |t|
+    t.string   "username",               :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                  :default => "", :null => false
+    t.string   "role",                   :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "authorize_users", ["email"], :name => "index_authorize_users_on_email", :unique => true
+  add_index "authorize_users", ["reset_password_token"], :name => "index_authorize_users_on_reset_password_token", :unique => true
+  add_index "authorize_users", ["username"], :name => "index_authorize_users_on_username", :unique => true
+
+  create_table "student_logins", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "student_logins", ["email"], :name => "index_student_logins_on_email", :unique => true
+  add_index "student_logins", ["reset_password_token"], :name => "index_student_logins_on_reset_password_token", :unique => true
+
+>>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
   create_table "surveys", :force => true do |t|
     t.string   "course_id"
-    t.string   "section_id"
+    t.string   "section"
     t.string   "instructor_id"
+<<<<<<< HEAD
+=======
+    t.string   "question_1"
+    t.string   "response"
+>>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

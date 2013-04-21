@@ -1,0 +1,59 @@
+<% if resource_name.to_s == 'student_login'%> Student
+<% elsif resource_name.to_s == 'authorize_user'%> Authorize Users
+<% end %>
+
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <% if resource_name.to_s == 'student_login'%>
+  	<div>
+		<%= f.label :course %><br />   
+	 	<%= f.text_field :email %>
+  	</div>
+  	<div>
+  		<%= f.label :password %><br />
+  		<%= f.password_field :password %>
+  	</div>
+  	<div>
+  		<%= f.label :password_confirmation %><br />
+  		<%= f.password_field :password_confirmation %>
+  	</div>
+  <% elsif resource_name.to_s == 'authorize_user'%>
+  	<div>
+		<%= f.label :username %><br />   
+	 	<%= f.text_field :username %>
+  	</div>
+  	
+  	<div>
+  		<%= f.label :email %><br />
+  		<%= f.text_field :email%>	
+  	</div>
+	
+  	<div>
+  		<%= f.label :password %><br />
+  		<%= f.password_field :password %>
+  	</div>
+	
+	
+  	<div>
+  		<%= f.label :password_confirmation %><br />
+  		<%= f.password_field :password_confirmation %>
+  	</div>  	
+  	<div>
+    	<%= f.radio_button :role, 'admin' %>
+    	<%= f.label "admin"%>
+    	<br />
+    	<%= f.radio_button :role, 'instructor' %>
+    	<%= f.label "instructor" %>
+    	<br />
+    	<%= f.radio_button :role, 'department' %>
+    	<%= f.label "department" %>
+   	</div>
+  <% end %>
+  
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>

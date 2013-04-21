@@ -9,7 +9,7 @@
 </p>
 <p>
   <b>Section:</b>
-  <%= @survey.section_id %>
+  <%= @survey.section %>
 </p>
 <p>
   <b>Instructor:</b>
@@ -18,7 +18,23 @@
 <p><%= link_to 'add questions', new_survey_path(@survey) %> </p><br />
 <%= link_to 'Edit', edit_survey_path(@survey) %> | 
 
+<<<<<<< HEAD
 <%= link_to 'Done', surveys_path %>
 
 
 
+=======
+<p>
+  <b>Question 1:</b>
+  <%= @survey.question_1 %>
+</p>
+
+<p>
+  <b>Response:</b>
+  <%= @survey.response %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>
+>>>>>>> 2b330685dfc098fc7af63fc3bc824d362e52e495
