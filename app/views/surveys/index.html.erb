@@ -1,5 +1,4 @@
 <h1>Smart-Bubble surveys</h1>
-
 <table>
   <tr>
     <th>Survey id</th>
@@ -24,4 +23,8 @@
 
 <br />
 
-<%= link_to 'New Survey', new_survey_path %>
+<p><%= link_to 'New Survey', new_survey_path %> </p><br />
+
+<%- if devise_mapping.registerable? && controller_name == 'registrations' %>
+  <%= link_to "Sign up", new_registration_path(admin) %><br />
+<% end -%>

@@ -7,7 +7,7 @@
 Log In</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-<%= resource %>
+<br/>
   <% if resource_name.to_s == 'student_login' %>
     <div>
 		<%= f.label :Course %><br />   
@@ -32,6 +32,7 @@ Log In</h2>
   	</div>  
   	    
   <% end -%>
+  <br />
 
   <div><%= f.submit "Sign in" %></div>
 <% end %>

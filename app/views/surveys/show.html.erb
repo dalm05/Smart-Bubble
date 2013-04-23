@@ -16,7 +16,7 @@
   <%= @survey.instructor_id %>
 </p>
 <p><%= link_to 'add questions', new_survey_question_path(@survey) %> </p><br />
-<%= link_to 'Edit', edit_survey_question_path(@survey) %> | 
+<%= link_to 'Edit', edit_survey_path(@survey) %> | 
 
 
 <%= link_to 'Done', surveys_path %>
